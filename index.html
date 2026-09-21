@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite - 9 Meses ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Cormorant Garamond',serif;background:#fff;color:#222;overflow-x:hidden}
+
+/* TELA DO LAÇO */
+#tela-laco{
+  position:fixed;top:0;left:0;width:100%;height:100vh;
+  background:#fff;z-index:100;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  transition:1.2s ease;
+}
+#tela-laco.aberto{transform:translateY(-100%)}
+.monograma{font-size:40px;letter-spacing:8px;font-weight:300}
+.monograma span{font-size:50px}
+.clique{margin-top:20px;font-size:14px;letter-spacing:3px;animation:pulsar 1.5s infinite}
+@keyframes pulsar{0%,100%{opacity:1}50%{opacity:0.4}}
+.laco{
+  width:100%;max-width:500px;margin-top:40px;
+  position:relative;
+}
+.laco img{width:100%;display:block}
+
+/* CONTEÚDO DO CONVITE */
+.conteudo{max-width:500px;margin:auto;text-align:center;background:#fff}
+.foto-principal{width:100%;filter:grayscale(100%);display:block}
+.versiculo{padding:30px 20px;font-size:13px;letter-spacing:1px;line-height:1.6}
+.versiculo b{letter-spacing:2px}
+.nomes{font-family:'Great Vibes',cursive;font-size:42px;margin:20px 0}
+.data-grande{font-size:85px;line-height:1;font-weight:300}
+.info-data{font-size:14px;letter-spacing:2px;margin-top:10px;line-height:1.8}
+.botoes{padding:25px 20px;display:flex;flex-direction:column;gap:12px}
+.botao{
+  border:1px solid #222;border-radius:30px;
+  padding:14px;display:flex;align-items:center;
+  gap:12px;justify-content:center;
+  text-decoration:none;color:#222;font-size:13px;
+  letter-spacing:2px;transition:.3s
+}
+.botao:hover{background:#222;color:#fff}
+.musica-btn{
+  position:fixed;top:15px;right:15px;z-index:10;
+  background:rgba(255,255,255,0.8);border-radius:50%;
+  width:38px;height:38px;display:flex;
+  justify-content:center;align-items:center;cursor:pointer
+}
+</style>
+</head>
+<body>
+
+<div class="musica-btn" onclick="tocarMusica()">♪</div>
+<audio id="musica" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<!-- TELA 1 - LAÇO -->
+<div id="tela-laco" onclick="abrirConvite()">
+  <div class="monograma">C<span>/</span>E</div>
+  <div class="clique">CLIQUE PARA ABRIR</div>
+  <div class="laco">
+    <img src="https://i.imgur.com/5b5uXkL.png" style="filter:contrast(1.2)" alt="laço preto">
+    <!-- se a imagem não carregar, usa esse CSS de laço -->
+    <div style="font-size:120px;text-align:center">🎀</div>
+  </div>
+</div>
+
+<!-- TELA 2 - CONVITE -->
+<div class="conteudo">
+  <img src="IMG_8227.jpeg" class="foto-principal" alt="nossa foto">
+
+  <div class="versiculo">
+    ACIMA DE TUDO, REVISTAM-SE DO AMOR,<br>
+    QUE É O ELO PERFEITO.<br>
+    CL 3:14<br><br>
+    COM A BENÇÃO DE DEUS E SEUS PAIS...
+  </div>
+
+  <div class="nomes">Charmila e Elijah</div>
+
+  <div style="letter-spacing:3px;font-size:12px">CONVIDAM PARA CELEBRAR</div>
+  <div style="letter-spacing:3px;font-size:12px;margin-bottom:10px">9 MESES DE AMOR</div>
+
+  <div class="data-grande">21</div>
+  <div class="info-data">
+    DE DEZEMBRO DE 2025<br>
+    SÁBADO, ÀS 17:00H<br><br>
+    LOCAL DA CERIMÔNIA<br>
+    NOSSO CANTINHO ESPECIAL ❤️
+  </div>
+
+  <img src="IMG_8227.jpeg" class="foto-principal" style="margin-top:25px">
+
+  <div style="font-size:11px;letter-spacing:2px;margin:20px">CLIQUE NOS ÍCONES PARA INTERAGIR</div>
+
+  <div class="botoes">
+    <a class="botao" href="https://wa.me/258850730250?text=Confirmo%20presença%20❤️" target="_blank">♡ CONFIRME PRESENÇA</a>
+    <a class="botao" href="#" onclick="alert('Nosso local especial ❤️')">⚑
